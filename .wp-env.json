@@ -1,0 +1,16 @@
+{
+  "plugins": [],
+  "themes": [],
+  "port": 8888,
+  "env": {
+    "tests": {
+      "port": 8889
+    }
+  },
+  "config": {
+    "WP_DEBUG": true
+  },
+  "mappings": {
+    "wp-content/themes/wp-test/": "./dist"
+  }
+}

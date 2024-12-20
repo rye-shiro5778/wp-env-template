@@ -1,0 +1,29 @@
+{
+  "name": "wp-test",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "watch": "vite build --watch & node watch.js",
+    "wp-env": "wp-env",
+    "wp-start": "npx wp-env start",
+    "wp-stop": "npx wp-env stop",
+    "wp-export": "npx wp-env run cli wp db export sql/wpenv.sql",
+    "wp-import": "npx wp-env run cli wp db import sql/wpenv.sql"
+  },
+  "devDependencies": {
+    "@wordpress/env": "^10.14.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3",
+    "glob": "^11.0.0",
+    "sass": "^1.83.0",
+    "vite-plugin-sass-glob-import": "^5.0.0"
+  },
+  "packageManager": "yarn@3.6.1",
+  "volta": {
+    "node": "22.12.0",
+    "yarn": "3.6.1"
+  }
+}
