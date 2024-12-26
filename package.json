@@ -7,8 +7,8 @@
     "wp-env": "wp-env",
     "wp-start": "npx wp-env start",
     "wp-stop": "npx wp-env stop",
-    "wp-export": "npx wp-env run cli wp db export ./wpenv.sql",
-    "wp-import": "npx wp-env run cli wp db import ./wpenv.sql"
+    "wp-export": "npx wp-env run cli wp db export ./sql/wpenv.sql",
+    "wp-import": "npx wp-env run cli wp db import ./sql/wpenv.sql"
   },
   "devDependencies": {
     "@wordpress/env": "^10.14.0",
