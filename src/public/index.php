@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<html lang="ja">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Title</title>
-  <?php
-  $root = get_template_directory_uri();
-  $css_ext = "css";
-  $js_ext = "js";
-  ?>
-  <link rel="stylesheet" href="<?php echo $root; ?>/assets/styles/main.<?php echo $css_ext ?>">
-  <script src="<?php echo $root; ?>/assets/js/script.<?php echo $js_ext ?>" type="module"></script>
-</head>
+<?php
+get_template_part('components/head', null, [
+    'title' => 'カスタムタイトル',
+    'css_files' => ['/assets/styles/main.css'],
+    'js_files' => ['/assets/js/script.js'],
+    'meta' => ['description' => 'ページの説明文']
+]);
+?>
 
 <body>
-  <p>テスト2</p>
-  <p>静的画像</p>
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/test.jpg" alt="" width="300" height="300">
+    <p>テストa</p>
+    <p>静的画像</p>
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/test.jpg" alt="" width="300" height="300">
+    <?php get_template_part('components/footer', null, array('arg1' => 'value1', 'arg2' => 'value2')); ?>
 </body>
 
 </html>
